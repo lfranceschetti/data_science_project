@@ -1,0 +1,416 @@
+{
+  "Standorte": [
+    {
+      "ID": "Zch_Stampfenbachstrasse",
+      "Name": "Zürich Stampfenbachstrasse",
+      "Kurzname": "Stampfenbachstrasse",
+      "Code": "ZSTA",
+      "Koordinaten_LV95_X": 2683148,
+      "Koordinaten_LV95_Y": 1249020,
+      "Koordinaten_WGS84_lat": 47.3868,
+      "Koordinaten_WGS84_lng": 8.5398,
+      "Adresse": "Stampfenbachstrasse 144, 8006 Zürich",
+      "Höhe [M.ü.M.]": 445,
+      "Beschreibung": "Die Messstation steht an zentraler Lage in der Stadt Zürich. Sie repräsentiert eine städtische Lage mit mässigem Verkehr."
+    },
+    {
+      "ID": "Zch_Schimmelstrasse",
+      "Name": "Zürich Schimmelstrasse",
+      "Kurzname": "Schimmelstrasse",
+      "Code": "ZSIM",
+      "Koordinaten_LV95_X": 2681943,
+      "Koordinaten_LV95_Y": 1247245,
+      "Koordinaten_WGS84_lat": 47.371,
+      "Koordinaten_WGS84_lng": 8.5235,
+      "Adresse": "Schimmelstrasse 21, 8003 Zürich",
+      "Höhe [M.ü.M.]": 413,
+      "Beschreibung": "Die Messstation steht an einer städtischen Hauptverkehrsachse in zentraler Lage in einem Wohn- und Geschäftsquartier in der Stadt Zürich. Sie repräsentiert eine städtische Lage mit sehr starkem Verkehr."
+    },
+    {
+      "ID": "Zch_Rosengartenstrasse",
+      "Name": "Zürich Rosengartenstrasse",
+      "Kurzname": "Rosengartenstrasse",
+      "Code": "ZROS",
+      "Koordinaten_LV95_X": 2682106,
+      "Koordinaten_LV95_Y": 1249935,
+      "Koordinaten_WGS84_lat": 47.3952,
+      "Koordinaten_WGS84_lng": 8.5261,
+      "Adresse": "Rosengartenstrasse 24, 8037 Zürich",
+      "Höhe [M.ü.M.]": 433,
+      "Beschreibung": "Die Messstation steht an einer städtischen Hauptverkehrsachse in zentraler Lage in einem Wohn- und Geschäftsquartier in der Stadt Zürich. Sie repräsentiert eine städtische Lage mit sehr starkem Verkehr."
+    },
+    {
+      "ID": "Zch_Heubeeribüel",
+      "Name": "Zürich Heubeeribüel",
+      "Kurzname": "Heubeeribüel",
+      "Code": "ZHEU",
+      "Koordinaten_LV95_X": 2685137,
+      "Koordinaten_LV95_Y": 1248473,
+      "Koordinaten_WGS84_lat": 47.3815,
+      "Koordinaten_WGS84_lng": 8.5659,
+      "Adresse": "Heubeeriweg 30, 8044 Zürich",
+      "Höhe [M.ü.M.]": 610,
+      "Beschreibung": "Die Messstation liegt in einem Schulareal an erhöhter Hanglage am Siedlungsrand der Stadtt Zürich angrenzend an ein offenes Feld gegen den Zürichberg-Wald. Der Standort ist repräsentativ für wenig verkehrsbeinflusste Wohn- und Erholungs-Gebiete am Rand der grossen Agglomerationen."
+    },
+    {
+      "ID": "Zch_Rosengartenbrücke",
+      "Name": "Zürich Rosengartenbrücke",
+      "Kurzname": "Rosengartenbrücke",
+      "Koordinaten_LV95_X": 1249848,
+      "Koordinaten_LV95_Y": 2682039,
+      "Koordinaten_WGS84_lat": 47.3943,
+      "Koordinaten_WGS84_lng": 8.5253,
+      "Adresse": "Rosengartenstrasse 18, 8037 Zürich",
+      "Höhe [M.ü.M.]": 424,
+      "Beschreibung": "Die Messstation steht an einer städtischen Hauptverkehrsachse in zentraler Lage in einem Wohn- und Geschäftsquartier in der Stadt Zürich. Sie repräsentiert eine städtische Lage mit sehr starkem Verkehr."
+    }
+  ],
+  "Parameter": [
+    {
+      "ID": "CO",
+      "Name": "Kohlenmonoxid",
+      "Einheit": "mg/m3",
+      "Beschreibung": "Kohlenmonoxid (CO) ist ein farb- und geruchloses, schlecht wasserlösliches Gas. Es entsteht hauptsächlich bei unvollständigen Verbrennungsprozessen und kann in fast allen Verbrennungsabgasen nachgewiesen werden. Der motorisierte Strassenverkehr ist eine der Hauptquellen der CO-Emissionen."
+    },
+    {
+      "ID": "SO2",
+      "Name": "Schwefeldioxid",
+      "Einheit": "µg/m3",
+      "Beschreibung": "Schwefeldioxid SO2 ist ein farbloses, leicht wasserlösliches, stechend riechendes Gas. Es entsteht bei der Verbrennung fossiler schwefelhaltiger Energieträger wie Kohle und Öl. Schwefeldioxid ist der klassische Luftschadstoff des Wintersmogs der vergangenen Jahrzehnte."
+    },
+    {
+      "ID": "O3",
+      "Name": "Ozon",
+      "Einheit": "µg/m3",
+      "Beschreibung": "Ozon (O3) ist ein normaler Bestandteil der Atmosphäre. In höheren Schichten (Stratosphäre) schützt es das Leben auf der Erde vor der schädlichen UV-Strahlung der Sonne. In den tieferen Luftschichten gefährdet es als wichtigster Bestandteil des Sommersmogs den Menschen und seine Umwelt. Hier bildet sich Ozon unter dem Einfluss des Sonnenlichts aus Stickoxiden (NOx) und flüchtigen organischen Verbindungen (VOC). Dabei kommt den Abgasen des Motorfahrzeugverkehrs die grösste Bedeutung zu."
+    },
+    {
+      "ID": "NOx",
+      "Name": "Stickoxide",
+      "Einheit": "ppb",
+      "Beschreibung": "Stickoxide oder Stickstoffoxide ist ein Sammelbegriff für zahlreiche gasförmige Oxide des Stickstoffs. Stickstoffmonoxid (NO) und Stickstoffdioxid (NO2) werden als NOx zusammengefasst."
+    },
+    {
+      "ID": "NO",
+      "Name": "Stickstoffmonoxid",
+      "Einheit": "µg/m3",
+      "Beschreibung": "Stickstoffmonoxid ist ein farb- und geruchloses giftiges Gas. Es ist eine chemische Verbindung aus den Elementen Stickstoff und Sauerstoff und gehört zur Gruppe der Stickoxide. NO ist ein Radikal, das in der Atmosphäre in das giftigere Stichstoffdioxid (NO2) umgewandelt wird."
+    },
+    {
+      "ID": "NO2",
+      "Name": "Stickstoffdioxid",
+      "Einheit": "µg/m3",
+      "Beschreibung": "Stickoxide (NOx) entstehen als unerwünschte Nebenprodukte bei Verbrennungsvorgängen. Dabei reagiert vor allem der Luftstickstoff (N2) mit dem Sauerstoff (O2) der Verbrennungsluft. Bei diesem Prozess entsteht Stickstoffmonoxid (NO), das erst in der Atmosphäre in das giftigere Stickstoffdioxid (NO2) umgewandelt wird."
+    },
+    {
+      "ID": "PM10",
+      "Name": "Schwebestaub PM10",
+      "Einheit": "µg/m3",
+      "Beschreibung": "Lungengängiger Feinstaub ist eine Mischung von kleinsten Teilchen mit weniger als einem Hundertstel Millimeter Durchmesser (10 µm). Sie unterscheiden sich in Grösse, Herkunft und Wirkung. Dazu zählen, nebst natürlichen mineralischen Anteilen, Abriebteilchen von Pneus und Strassenbelag, Aufwirbelungen, Russteilchen aus Holzfeuerungen auch Dieselruss sowie Partikel aus illegaler Abfallverbrennung. Eine wichtige Rolle spielt zudem die Partikelbildung aus gasförmigen Vorläuferschadstoffen, namentlich Stickoxiden, Schwefeldioxid und Ammoniak. Zudem haften an den Partikeln aus Verbrennungsprozessen Substanzen wie polyaromatische Kohlenwasserstoffe (PAK) und Dioxine, die teils krebserregend und erbgutschädigend wirken können."
+    },
+    {
+      "ID": "PM2.5",
+      "Name": "Schwebestaub PM2.5",
+      "Einheit": "µg/m3",
+      "Beschreibung": "Lungengängiger Feinstaub ist eine Mischung von kleinsten Teilchen mit weniger als zweieinhalb Tausendstel Millimeter Durchmesser (2.5 µm). Sie unterscheiden sich in Grösse, Herkunft und Wirkung. Dazu zählen, nebst natürlichen mineralischen Anteilen, Abriebteilchen von Pneus und Strassenbelag, Aufwirbelungen, Russteilchen aus Holzfeuerungen auch Dieselruss sowie Partikel aus illegaler Abfallverbrennung. Eine wichtige Rolle spielt zudem die Partikelbildung aus gasförmigen Vorläuferschadstoffen, namentlich Stickoxiden, Schwefeldioxid und Ammoniak. Zudem haften an den Partikeln aus Verbrennungsprozessen Substanzen wie polyaromatische Kohlenwasserstoffe (PAK) und Dioxine, die teils krebserregend und erbgutschädigend wirken können."
+    },
+    {
+      "ID": "PN",
+      "Name": "Partikelanzahl",
+      "Einheit": "1/cm3"
+    },
+    {
+      "ID": "O3_max_h1",
+      "Name": "Ozon, höchstes Stundenmittel",
+      "Einheit": "µg/m3",
+      "Beschreibung": "Höchster Ozon-Stundenmittelwert eines Tages"
+    },
+    {
+      "ID": "O3_nb_h1>120",
+      "Einheit": "nb",
+      "Beschreibung": "Anzahl Ozon-Stundenmittelwerte über dem Grenzwert von 120 µg/m3"
+    },
+    {
+      "ID": "T",
+      "Name": "Lufttemperatur",
+      "Einheit": "°C",
+      "Beschreibung": "Physikalisch betrachtet ist die Lufttemperatur ein Mass für den Wärmezustand eines Luftvolumens. Dieser wird bestimmt durch die mittlere kinetische Energie der ungeordneten Molekularbewegung in der Luft. Je grösser die mittlere Geschwindigkeit aller Moleküle in einem Luftvolumen ist, um so höher ist auch seine Lufttemperatur."
+    },
+    {
+      "ID": "T_min_h1",
+      "Name": "Lufttemperatur, höchstes Stundenmittel",
+      "Einheit": "°C",
+      "Beschreibung": "Höchstes Stundenmittel der Lufttemperatur im Mittelungsintervall."
+    },
+    {
+      "ID": "T_max_h1",
+      "Name": "Lufttemperatur, kleinstes Stundenmittel",
+      "Einheit": "°C",
+      "Beschreibung": "Kleinstes Stundenmittel der Lufttemperatur im Mittelungsintervall."
+    },
+    {
+      "ID": "p",
+      "Name": "Luftdruck",
+      "Einheit": "hPa",
+      "Beschreibung": "Mit Luftdruck wird der von der Masse der Luft unter der Wirkung der Erdanziehung ausgeübte Druck bezeichnet. Er ist definiert als das Gewicht der Luftsäule pro Flächeneinheit vom Erdboden bis zur äusseren Grenze der Atmosphäre."
+    },
+    {
+      "ID": "WD",
+      "Name": "Windrichtung",
+      "Einheit": "°",
+      "Beschreibung": "Die Windrichtung ist die Richtung, aus welcher der Wind weht. Sie wird bestimmt nach dem Polarwinkel (Azimut). Zur Richtungsangabe benutzt man die 360 Grad Skala des Kreises. Alle Richtungsangaben in Grad sind rechtweisend auf geographisch Nord bezogen, d.h. Ost = 90°, Süd = 180°, West=270° und Nord=360°."
+    },
+    {
+      "ID": "WVv",
+      "Name": "Windgeschwindigkeit (vektoriell)",
+      "Einheit": "m/s",
+      "Beschreibung": "Unter Windgeschwindigkeit ist die horizontale Verlagerungsgeschwindigkeit der Luftteilchen zu verstehen"
+    },
+    {
+      "ID": "WVs",
+      "Name": "Windgeschwindigkeit (skalar)",
+      "Einheit": "m/s",
+      "Beschreibung": "Unter Windgeschwindigkeit ist die horizontale Verlagerungsgeschwindigkeit der Luftteilchen zu verstehen"
+    },
+    {
+      "ID": "rH",
+      "Name": "relative Luftfeuchtigkeit",
+      "Einheit": "%",
+      "Beschreibung": "Die relative Luftfeuchtigkeit gibt das Gewichtsverhältnis des momentanen Wasserdampfgehalts zu dem Wasserdampfgehalt an, der für die aktuelle Temperatur und den aktuellen Druck maximal möglich ist."
+    },
+    {
+      "ID": "RainDur",
+      "Name": "Niederschlagsdauer",
+      "Einheit": "min",
+      "Beschreibung": "Anzahl der Minuten in denen es im Mittelungsintervall geregnet hat."
+    },
+    {
+      "ID": "StrGlo",
+      "Name": "Globalstrahlung",
+      "Einheit": "W/m-2",
+      "Beschreibung": "Die Globalstrahlung ist die am Boden von einer horizontalen Ebene empfangene Sonnenstrahlung und setzt sich aus der direkten Strahlung (der Schatten werfenden Strahlung) und der gestreuten Sonnenstrahlung (diffuse Himmelsstrahlung) aus der Himmelshalbkugel zusammen."
+    }
+  ],
+  "Fahrzeugklassen": [
+    {
+      "Klasse.ID": 0,
+      "Klasse.Text": "Unbekannt",
+      "Beschreibung": "Fahrzeug detektierbar, aber nicht klassifizierbar"
+    },
+    {
+      "Klasse.ID": 1,
+      "Klasse.Text": "Bus",
+      "Beschreibung": "Bus für den Transport einer größeren Anzahl von Personen (Reisebus, Regionalbus, > 9 Sitze)\r\nBus für den Transport einer größeren Anzahl von Personen, mit Anhänger (Reisebus, Regionalbus, > 9 Sitze)"
+    },
+    {
+      "Klasse.ID": 2,
+      "Klasse.Text": "Motorrad",
+      "Beschreibung": "Fahrrad, Moped, Motorrad oder Motorroller"
+    },
+    {
+      "Klasse.ID": 3,
+      "Klasse.Text": "Personenwagen",
+      "Beschreibung": "Pkw (bis 9 Sitze, Gesamtgewicht ≤3.5t)"
+    },
+    {
+      "Klasse.ID": 4,
+      "Klasse.Text": "Personenwagen mit Anhänger",
+      "Beschreibung": "Pkw mit Anhänger (bis 9 Sitze, Gesamtgewicht ≤3.5t)"
+    },
+    {
+      "Klasse.ID": 5,
+      "Klasse.Text": "Lieferwagen",
+      "Beschreibung": "Van mit abgeschrägter Front, Aufbau mindestens so hoch wie das Fahrerhaus (einschließlich Kleintransporter und Umzugswagen, Gewicht 2.8t bis 3.5t)\r\nPickup mit oder ohne kleiner Ladung (Fahrerhaus vorne, kein Aufbau, Gewicht ≤3.5t)\r\nWohnmobil (würfelförmig, Dach ohne Erweiterung (z. B. Schlafkoje) Gewicht ≤3.5t)"
+    },
+    {
+      "Klasse.ID": 6,
+      "Klasse.Text": "Lieferwagen mit Anhänger",
+      "Beschreibung": "Van mit Anhänger (Gewicht 2.8t bis 3.5t) \r\nPickup ohne oder mit kleiner Ladung, mit Anhänger (Fahrerhaus vorne, kein Aufbau, Gewicht ≤3.5t) \r\nWohnmobil mit Anhänger (würfelförmig, Dach ohne Erweiterung (z. B. Schlafkoje) Gewicht ≤3.5t) \r\n"
+    },
+    {
+      "Klasse.ID": 7,
+      "Klasse.Text": "Lieferwagen mit Auflieger",
+      "Beschreibung": "Van mit Sattelauflieger (Gewicht ≤3.5t)"
+    },
+    {
+      "Klasse.ID": 8,
+      "Klasse.Text": "Lastwagen",
+      "Beschreibung": "Lkw mit Aufbau (bis 12 m Länge, Gewicht >3.5t) \r\nKipper mit leerer oder fast leerer Ladefläche (Bis 12m Länge, Gewicht >3.5t) \r\nTanker für den Transport von Flüssigkeiten (ovaler Querschnitt, bis 12 m Länge, Gewicht >3.5t) \r\nTieflader ohne Aufbau oder mit niedriger Fracht (Fracht niedriger als Fahrerhaus, bis 12 m Länge, Gewicht >3.5t) \r\nSattelschlepper ohne Sattelauflieger"
+    },
+    {
+      "Klasse.ID": 9,
+      "Klasse.Text": "Lastenzug",
+      "Beschreibung": "Lkw mit Aufbau und Anhänger (Bis 18.75 m Länge, Gewicht >3.5t)\r\nKipper mit leerer oder fast leerer Ladefläche, mit Anhänger (Bis 18.75m Länge, Gewicht >3.5t)\r\nTanker für den Transport von Flüssigkeiten mit Anhänger (ovaler Querschnitt, bis 18.75m Länge, Gewicht >3.5t)\r\nLkw ohne Aufbau oder mit niedriger Fracht, mit Anhänger (Fracht niedriger als Fahrerhaus, bis 18.75 m Länge, Gewicht >3.5t)\r\nFahrzeugtransporter, beladen, mit Anhänger (2 Ladeflächen, Länge bis 21.5 m, Gewicht > 3.5t)\r\nFahrzeugtransporter, unbeladen, mit Anhänger (2 Ladeflächen, Länge bis 21.5 m, Gewicht > 3.5t)"
+    },
+    {
+      "Klasse.ID": 10,
+      "Klasse.Text": "Sattelzug",
+      "Beschreibung": "Lkw mit Sattelauflieger (beladen, bis 16.5 m Länge, Gewicht >3.5t).\r\nKipper mit Sattelauflieger mit leerer oder fast leerer Ladefläche (bis 16.5 m Länge, Gewicht >3.5t)\r\nTanker mit Sattelauflieger (ovaler Querschnitt, bis 16.5 m Länge, Gewicht >3.5t)\r\nTieflader mit Sattelauflieger (bis 16.5 m Länge, Gewicht >3.5t)"
+    },
+    {
+      "Klasse.ID": 11,
+      "Klasse.Text": "Trolleybus",
+      "Beschreibung": "Oberleitungsbus der Verkehrsbetriebe Zürich (VBZ)"
+    },
+    {
+      "Klasse.ID": 101,
+      "Klasse.Text": "Zweirad",
+      "Beschreibung": "Fahrrad, Moped, Motorrad oder Motorroller (bis 2.7 m Länge)"
+    },
+    {
+      "Klasse.ID": 102,
+      "Klasse.Text": "Personenwagen",
+      "Beschreibung": "Personenwagen und Lieferwagen (von 2.7 m bis 7m Länge)"
+    },
+    {
+      "Klasse.ID": 103,
+      "Klasse.Text": "Lastwagen",
+      "Beschreibung": "Lastwagen, Lastenzug und Sattelzug (von 7 m bis 25m Länge)"
+    }
+  ],
+  "Spuren": [
+    {
+      "Standort": "Rosengartenbrücke",
+      "Richtung": "Hardbrücke",
+      "Spur": 0,
+      "Beschreibung": "Busspur"
+    },
+    {
+      "Standort": "Rosengartenbrücke",
+      "Richtung": "Hardbrücke",
+      "Spur": 1,
+      "Beschreibung": "Spur 1 von links"
+    },
+    {
+      "Standort": "Rosengartenbrücke",
+      "Richtung": "Hardbrücke",
+      "Spur": 2,
+      "Beschreibung": "Spur 2 von links"
+    },
+    {
+      "Standort": "Rosengartenbrücke",
+      "Richtung": "Bucheggplatz",
+      "Spur": 0,
+      "Beschreibung": "Spur 1 von links"
+    },
+    {
+      "Standort": "Rosengartenbrücke",
+      "Richtung": "Bucheggplatz",
+      "Spur": 1,
+      "Beschreibung": "Spur 2 von links"
+    },
+    {
+      "Standort": "Rosengartenbrücke",
+      "Richtung": "Bucheggplatz",
+      "Spur": 2,
+      "Beschreibung": "Abzweigspur in die Nordstrasse"
+    },
+    {
+      "Standort": "Rosengartenbrücke",
+      "Richtung": "Bucheggplatz",
+      "Spur": 3,
+      "Beschreibung": "Busspur"
+    },
+    {
+      "Standort": "Stampfenbachstrasse",
+      "Richtung": "Stampfenbachplatz",
+      "Spur": 0
+    },
+    {
+      "Standort": "Stampfenbachstrasse",
+      "Richtung": "Schaffhauserplatz",
+      "Spur": 0
+    }
+  ],
+  "Grenzwerte": [
+    {
+      "ID": "O3",
+      "Immisionsgrenzwert": 120,
+      "Einheit": "µg/m3",
+      "Intervall": "h1",
+      "Statistische Definition": "1h-Mittelwert; darf höchstens einmal pro Jahr überschritten werden"
+    },
+    {
+      "ID": "NO2",
+      "Immisionsgrenzwert": 80,
+      "Einheit": "µg/m3",
+      "Intervall": "d1",
+      "Statistische Definition": "24h-Mittelwert; darf höchstens einmal pro Jahr überschritten werden"
+    },
+    {
+      "ID": "NO2",
+      "Immisionsgrenzwert": 30,
+      "Einheit": "µg/m3",
+      "Intervall": "y1",
+      "Statistische Definition": "Jahresmittelwert (arithmetischer Mittelwert)"
+    },
+    {
+      "ID": "PM10",
+      "Immisionsgrenzwert": 50,
+      "Einheit": "µg/m3",
+      "Intervall": "h1",
+      "Statistische Definition": "24h-Mittelwert; darf höchstens einmal pro Jahr überschritten werden"
+    },
+    {
+      "ID": "PM10",
+      "Immisionsgrenzwert": 20,
+      "Einheit": "µg/m3",
+      "Intervall": "y1",
+      "Statistische Definition": "Jahresmittelwert (arithmetischer Mittelwert)"
+    },
+    {
+      "ID": "PM2.5",
+      "Immisionsgrenzwert": 10,
+      "Einheit": "µg/m3",
+      "Intervall": "y1",
+      "Statistische Definition": "Jahresmittelwert (arithmetischer Mittelwert)"
+    },
+    {
+      "ID": "SO2",
+      "Immisionsgrenzwert": 30,
+      "Einheit": "µg/m3",
+      "Intervall": "y1",
+      "Statistische Definition": "Jahresmittelwert (arithmetischer Mittelwert)"
+    },
+    {
+      "ID": "SO2",
+      "Immisionsgrenzwert": 100,
+      "Einheit": "µg/m3",
+      "Intervall": "d1",
+      "Statistische Definition": "24h-Mittelwert; darf höchstens einmal pro Jahr überschritten werden"
+    },
+    {
+      "ID": "CO",
+      "Immisionsgrenzwert": 8,
+      "Einheit": "mg/m3",
+      "Intervall": "d1",
+      "Statistische Definition": "24h-Mittelwert; darf höchstens einmal pro Jahr überschritten werden"
+    }
+  ],
+  "Datensatz": [
+    {
+      "Datensatz": "Stündlich aktualisierte Luftqualitätsmessungen, seit 1983",
+      "URL": "https://data.stadt-zuerich.ch/dataset/ugz_luftschadstoffmessung_stundenwerte"
+    },
+    {
+      "Datensatz": "Stündlich aktualisierte Meteodaten, seit 1992",
+      "URL": "https://data.stadt-zuerich.ch/dataset/ugz_meteodaten_stundenmittelwerte"
+    },
+    {
+      "Datensatz": "Verkehrszähldaten an der Rosengartenstrasse nach Fahrzeugtypen, seit 2020",
+      "URL": "https://data.stadt-zuerich.ch/dataset/ugz_verkehrsdaten_stundenwerte_rosengartenbruecke"
+    },
+    {
+      "Datensatz": "Verkehrszähldaten an der Stampfenbachstrasse nach Fahrzeugtypen, seit 2007",
+      "URL": "https://data.stadt-zuerich.ch/dataset/ugz_verkehrsdaten_stundenwerte_stampfenbachstrasse"
+    },
+    {
+      "Datensatz": "Täglich aktualisierte Luftqualitätsmessungen, seit 1983",
+      "URL": "https://data.stadt-zuerich.ch/dataset/ugz_luftschadstoffmessung_tageswerte"
+    },
+    {
+      "Datensatz": "Täglich aktualisierte Meteodaten, seit 1992",
+      "URL": "https://data.stadt-zuerich.ch/dataset/ugz_meteodaten_tagesmittelwerte"
+    }
+  ]
+}
