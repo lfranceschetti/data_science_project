@@ -1,6 +1,5 @@
 # https://stackoverflow.com/questions/24251219/pandas-read-csv-low-memory-and-dtype-options
 import pandas as pd
-#test test
 years = [f'{i}' for i in range(2007, 2022)]
 
 
@@ -72,4 +71,4 @@ df_list = []
 for year in years:
     df_list.append(get_df_of_year(year))
 df_final = pd.concat(df_list)
-df_final.to_csv('../processed_data/full_data', index=False)
+df_final.to_csv('../processed_data/full_data.csv', index=False)
