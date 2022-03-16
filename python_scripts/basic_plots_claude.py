@@ -23,4 +23,4 @@ ax2.set_ylabel('NO2 concentration (in µg/m3)', color='b')
 plt.show()
 
 #plotting figure 2 (10.01.2008 vs 10.01.2021 cars)
-subdf_full_data=df_full_data.loc['Datum']== '2008-01-10T18:30' #dos't work
+subdf_full_data=df_full_data.loc['Datum']== '2008-01-10T18:30' #does't work
