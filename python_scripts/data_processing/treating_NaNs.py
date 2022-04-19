@@ -1,3 +1,4 @@
+from math import inf
 import pandas as pd
 import csv
 from sklearn.experimental import enable_iterative_imputer
@@ -13,10 +14,8 @@ save = ['../../processed_data/full_data_imputed_daily.csv',
 
 for i, path in enumerate(paths):
     df = pd.read_csv(path)
-    # Drop columns only if they have no a single value
-    df.dropna(thresh=16)
-
-    print(df)
+    # Drop columns only if they have not a single value
+    df = df.dropna(thresh=16)
 
     datum_cols = ["Jahr", "Monat", "Tag", "Tagesdatum"]
     if(i == 1):
@@ -35,8 +34,10 @@ for i, path in enumerate(paths):
     # df_mean_miss = pd.concat([df_mean, df_miss], axis=1)
 
     # Iterative Inputer
+    min_value = [0.0, 0.0, 0.0, 0.0, 0.0, -inf, 0.0,
+                 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,  0.0, 0.0,  0.0]
     iterativeImputer = IterativeImputer(
-        estimator=BayesianRidge(), random_state=0)
+        estimator=BayesianRidge(), random_state=0, min_value=min_value)
     df_imputed = pd.DataFrame(iterativeImputer.fit_transform(
         df), index=df.index, columns=df.columns)
 
