@@ -97,7 +97,7 @@ plt.xlabel('number of features')
 plt.ylabel('r-squared')
 plt.title("Optimal Number of Features")
 plt.legend(['test score', 'train score'], loc='upper left')
-# plt.show()
+plt.show()
 
 # final model with optimal feature counts
 lm = linear_model.LinearRegression()
