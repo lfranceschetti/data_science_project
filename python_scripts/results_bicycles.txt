@@ -4,17 +4,17 @@ Zweirad
 -------------------------
 
 LinearModel
-Best score:0.5529398540285715
+Best score:0.5545912686947487
 {"n_features_to_select": 10}
-Features:[1 1 4 8 9 1 6 1 1 3 5 1 1 1 2 1 7 1]
+Features:[1 1 5 7 9 1 6 1 1 3 8 1 1 1 2 1 4 1]
 
 DecisionTree
-Best score:0.487875132028711
-{"estimator__max_depth": null, "n_features_to_select": 8}
-Features:[ 1  3  8  1  1  6  1  1 10  1  7 11  1  9  2  4  5  1]
+Best score:0.4680276422990827
+{"estimator__max_depth": null, "n_features_to_select": 9}
+Features:[ 1  2  7  1  1  6  1  1  8  1  4  3  1 10  5  1  9  1]
 
 RidgeRegression
-Best score:0.5767290495144755
-{"estimator__alpha": 200, "n_features_to_select": 10}
-Features:[1 1 3 7 8 1 6 1 1 1 5 1 4 2 1 1 9 1]
+Best score:0.5782567021510079
+{"estimator__alpha": 200, "n_features_to_select": 9}
+Features:[ 1  1  5  9 10  1  7  1  1  3  8  1  6  2  1  1  4  1]
 

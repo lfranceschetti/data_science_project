@@ -28,6 +28,14 @@ def save(string, n):
             f.write('\n')
         f.close()
 
+def permutation_importance(model, X_val, y_val, X_labels,n_repeats): # added, please look over it: according to scikit-learn.org ->(n_repeats is given by me)
+    from sklearn.inspection import permutation_importance
+    r = permutation_importance(model, X_val, y_val, n_repeats=n_repeats)
+    for i in r.importances_mean.argsort()[::-1]:
+        if r.importances_mean[i] - 2 * r.importances_std[i] > 0:
+            save(f"{X_labels[i]}", 1) #-> I THINK THIS IS NOT CORRECT
+            save(f"{r.importances_mean[i]:.3f}", 1)
+            save(f" +/- {r.importances_std[i]:.3f}", 1)
 
 save("MODEL EVALUATION AIR QUALITY", 2)
 
@@ -62,8 +70,8 @@ if(predict_bicycles):
         'NOx', 'O3', 'CO', 'PM10', 'SO2']
     y_labels = ['Zweirad']
 
-
 X_train, X_test = train_data[X_labels], test_data[X_labels]
+Y_train, Y_test = train_data[y_labels], test_data[y_labels] #added -> not sure if necessary
 
 for label in y_labels:
     save(label, 1)
@@ -81,3 +89,4 @@ for label in y_labels:
         save("Best score:"+str(best_score), 1)
         save(json.dumps(best_params), 1)
         save("Features:"+str(features), 2)
+        #permutation_importance(regressor,X_test,Y_test,X_labels,30) -> here perhaps implement?

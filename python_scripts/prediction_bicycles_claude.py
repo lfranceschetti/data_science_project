@@ -107,7 +107,7 @@ rfe = RFE(lm, n_features_to_select=10)
 rfe = rfe.fit(x_train, y_train)
 
 # prediction
-y_pred_dt = rfe.predict(x_test)
+y_pred_dt = model_cv.predict(x_test)
 regression_results('Linear Model (with CV)', 'Bicycle and Motorcycle', y_true=y_test, y_pred=y_pred_dt)
 
 ### JETZT NOCH MIT KATEGORISIERUNG (Linear Model) ###
