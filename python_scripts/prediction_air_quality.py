@@ -81,7 +81,8 @@ for label in y_labels:
     for name, model in models.items():
         save(name, 1)
         regressor = GridSearchCV(
-            RFE(model["function"]), model["params"], cv=5, scoring='r2')
+            RFE(model["function"]), model["params"], cv=5, scoring='r2'
+        )
         regressor.fit(X_train, y)
         best_score = regressor.best_score_
         best_params = regressor.best_params_
