@@ -1,4 +1,3 @@
-from pickle import FALSE
 import numpy as np
 from matplotlib import pyplot as plt
 import pandas as pd
@@ -14,7 +13,7 @@ predict_bicycles = True
 
 
 
-df = pd.read_csv('../processed_data/full_data_imputed_daily.csv')
+df = pd.read_csv('../../processed_data/full_data_imputed_daily.csv')
 
 
 def save(string, n):

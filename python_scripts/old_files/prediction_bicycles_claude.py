@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 import sklearn.metrics as metrics
 
-df_weather_traffic_daily = pd.read_csv('../processed_data/full_data_imputed_daily.csv')
+df_weather_traffic_daily = pd.read_csv('../../processed_data/full_data_imputed_daily.csv')
 
 # correlation_plot = sns.heatmap(df_weather_traffic_daily[['Zweirad','Personenwagen','Lastwagen','Hr',
 # 'RainDur','T']].corr(),annot = True,linewidths=3 )
