@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Monat <= 2.85\nentropy = 1.3\nsamples = 96312\nvalue = [50550, 40284, 3308, 2170]\nclass = 1", fillcolor="#fae8db"] ;
+1 [label="T <= -0.34\nentropy = 1.63\nsamples = 15454\nvalue = [5454, 7431, 1394, 1175]\nclass = 2", fillcolor="#dbfad8"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Jahr <= 2015.38\nentropy = 1.8\nsamples = 2955\nvalue = [451, 1465, 482, 557]\nclass = 2", fillcolor="#b9f5b4"] ;
+1 -> 2 ;
+3 [label="(...)", fillcolor="#C0C0C0"] ;
+2 -> 3 ;
+782 [label="(...)", fillcolor="#C0C0C0"] ;
+2 -> 782 ;
+1061 [label="Jahr <= 2013.82\nentropy = 1.53\nsamples = 12499\nvalue = [5003, 5966, 912, 618]\nclass = 2", fillcolor="#e7fce6"] ;
+1 -> 1061 ;
+1062 [label="(...)", fillcolor="#C0C0C0"] ;
+1061 -> 1062 ;
+3589 [label="(...)", fillcolor="#C0C0C0"] ;
+1061 -> 3589 ;
+7136 [label="Jahr <= 2014.94\nentropy = 1.2\nsamples = 80858\nvalue = [45096, 32853, 1914, 995]\nclass = 1", fillcolor="#f8dfcd"] ;
+0 -> 7136 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7137 [label="Personenwagen <= 200.07\nentropy = 1.32\nsamples = 42568\nvalue = [19353, 20732, 1581, 902]\nclass = 2", fillcolor="#f4fdf3"] ;
+7136 -> 7137 ;
+7138 [label="(...)", fillcolor="#C0C0C0"] ;
+7137 -> 7138 ;
+14401 [label="(...)", fillcolor="#C0C0C0"] ;
+7137 -> 14401 ;
+26374 [label="Monat <= 9.09\nentropy = 0.99\nsamples = 38290\nvalue = [25743, 12121, 333, 93]\nclass = 1", fillcolor="#f1bd98"] ;
+7136 -> 26374 ;
+26375 [label="(...)", fillcolor="#C0C0C0"] ;
+26374 -> 26375 ;
+36096 [label="(...)", fillcolor="#C0C0C0"] ;
+26374 -> 36096 ;
+}
