@@ -1,8 +1,19 @@
 # https://stackoverflow.com/questions/24251219/pandas-read-csv-low-memory-and-dtype-options
+
+###############################################
+###                Imports                  ###
+###############################################
+
 import pandas as pd
-import csv
 
+###############################################
+###   Do you want to save the file ?        ###
+###############################################
+save = True #True = Yes; False = No
 
+###############################################
+###         Create the full data            ###
+###############################################
 years = [f'{i}' for i in range(2007, 2022)]
 
 
@@ -68,7 +79,7 @@ def get_df_of_year(year):
                                 )
 
     df_full = pd.merge(df_traffic_meteo, df_air2,
-                       how="outer", on="Datum", sort=True,)
+                       how="outer", on="Datum", sort=True, )
 
     return df_full
 
@@ -78,14 +89,12 @@ for year in years:
     df_list.append(get_df_of_year(year))
 df_final = pd.concat(df_list)
 
-
 # Handle the date
 df_final["Datum"] = df_final.apply(lambda x: x["Datum"][0:16], axis=1)
 df_final["Jahr"] = df_final.apply(lambda x: x["Datum"][:4], axis=1)
 df_final["Monat"] = df_final.apply(lambda x: x["Datum"][5:7], axis=1)
 df_final["Tag"] = df_final.apply(lambda x: x["Datum"][8:10], axis=1)
 df_final["Zeit"] = df_final.apply(lambda x: x["Datum"][11:16], axis=1)
-
 
 df_final = df_final.drop(columns=["WD", "WVv"])
 
@@ -94,6 +103,8 @@ new_cols = cols[17:] + cols[0:17]
 
 df_final = df_final[new_cols]
 
-df_final.to_csv('../../processed_data/full_data.csv', index=False)
-# hi
-# hi yourself
+###############################################
+###    Save the data into a new csv file    ###
+###############################################
+if save == True:
+    df_final.to_csv('../../processed_data/full_data.csv', index=False)

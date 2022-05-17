@@ -1,7 +1,8 @@
+###############################################
+###                Imports                  ###
+###############################################
 import pandas as pd
 import numpy as np
-
-
 df = pd.read_csv('../../processed_data/full_data.csv')
 
 
@@ -42,4 +43,4 @@ df_daily = df_daily[cols]
 
 df_daily.to_csv('../../processed_data/full_data_daily.csv',
                 index=False, float_format='%.3f')
-# "ID": "T_min_h1",
+
