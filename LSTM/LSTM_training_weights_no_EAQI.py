@@ -13,7 +13,6 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
 import os
 os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
 
@@ -29,12 +28,11 @@ torch.use_deterministic_algorithms(True)
 #        Model configuaration     #
 ###################################
 
-ADD_WEIGHTS = True
 window = 48
 batch_size=32
-num_epochs = 6
-PATH = 'without_EAQI_with_weights.pt'
-EAQI_AS_PREDICTOR = True
+num_epochs = 5
+ADD_WEIGHTS = True
+PATH = 'model_wo_aqi_w_weights_48.pt'
 
 ###################################
 #     Functions preprocessing     #
@@ -46,9 +44,6 @@ data = data.loc[data["Jahr"] < 2021]
 
 X_labels = ['Zweirad', 'Personenwagen', 'Lastwagen', 'Hr', 'RainDur', 'T', 'WVs', 'StrGlo', 'p'] 
 y_label = "AQI"
-
-if(EAQI_AS_PREDICTOR):
-    X_labels.append("AQI")
 
 X_data = data[X_labels]
 y_data = data[y_label]
@@ -96,13 +91,25 @@ def accuracy(output: torch.Tensor, label: torch.Tensor) -> torch.Tensor:
     return acc
 
 
-def train_model(model, loss_function, optimizer, num_epochs=num_epochs):
+def train_model(model, loss_function, optimizer, train_data_full, num_epochs=num_epochs):
 
     torch.backends.cudnn.benchmark = True
     best_acc = 0.0
     stats = {}
 
     for epoch in range(num_epochs):
+
+        no_train_triplets = int(len(train_data_full)*0.7)
+        no_val_triplets = len(train_data_full) - no_train_triplets
+        print(f"train no: {no_train_triplets}")
+        print(f"valid no: {no_val_triplets}")
+        train_data, valid_data = random_split(train_data_full, [no_train_triplets, no_val_triplets], generator=torch.Generator().manual_seed(30+epoch))
+        train_loader = DataLoader(train_data, batch_size=32,
+                           shuffle=True)
+        valid_loader = DataLoader(valid_data, batch_size=32,
+                           shuffle=True)
+
+
         print(f"Start epoch: {epoch}")
         stats_epoch = {}
 
@@ -154,15 +161,16 @@ def train_model(model, loss_function, optimizer, num_epochs=num_epochs):
 ######################################
 
 class LSTM_Model(nn.Module):
-    def __init__(self, hidden_size=64, num_layers=1):
+    def __init__(self, hidden_size=48, num_layers=1):
         super(LSTM_Model, self).__init__()
 
         self.hidden_size = hidden_size
 
         self.dropout = nn.Dropout(0.5)
         self.lstm = nn.LSTM(input_size=len(X_labels), hidden_size=hidden_size,
-                          num_layers=num_layers, batch_first=True, dropout=0.5)
-        self.fc = nn.Linear(64, 4) 
+                          num_layers=num_layers, batch_first=True)
+        self.fc = nn.Linear(48, 16)
+        self.fc2 = nn.Linear(16, 4) 
 
         self.relu = nn.ReLU()
     
@@ -174,9 +182,11 @@ class LSTM_Model(nn.Module):
         hn = hn.view(-1, self.hidden_size)
         x = self.relu(hn) 
         x = self.dropout(x)
-        x = self.fc(x) 
+        x = self.fc(x)
+        x = self.relu(x) 
+        x = self.dropout(x)
+        x = self.fc2(x) 
         return x
-
 
 ######################################
 #         Training the model         #
@@ -190,31 +200,27 @@ if __name__ == "__main__":
 
     if(ADD_WEIGHTS):
         count = Counter(y)
-        ins_weights = torch.tensor([1/int(cnt) for cnt in count.values()])[:4]
+        count_list = [int(cnt) for cnt in count.values()]
+    
+        min = np.max(np.array(count_list))
+        ins_weights = torch.tensor([min/cnt for cnt in count_list])[:4]
         print(ins_weights)
 
+    whole_data = SeqDataset(X, y)
 
-    train_data = SeqDataset(X[:int(0.7*X.shape[0])-22], y[:int(0.7*X.shape[0])-22])
-
-    valid_data = SeqDataset(X[int(0.7*X.shape[0])-22:-18], y[int(0.7*X.shape[0])-22:-18])
-
-
-    train_loader = DataLoader(train_data, batch_size=batch_size,
+    train_loader = DataLoader(whole_data, batch_size=batch_size,
                             shuffle=True)
-    valid_loader = DataLoader(valid_data, batch_size=batch_size,
-                            shuffle=True)
-
+  
     model = LSTM_Model()
 
     loss_f = torch.nn.CrossEntropyLoss()
-
     if(ADD_WEIGHTS):
         loss_f = torch.nn.CrossEntropyLoss(weight=ins_weights)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=0.001, weight_decay=1e-5)
+
+    optimizer = torch.optim.AdamW(model.parameters(), lr=0.001)
     model = model.double()
 
 
-    best_model, stats = train_model(model, loss_f, optimizer)
+    best_model, stats = train_model(model, loss_f, optimizer, whole_data)
 
-    with open('saved_stats.pkl', 'wb') as f:
-        pickle.dump(stats, f)
+    
